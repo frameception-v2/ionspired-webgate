@@ -13,7 +13,7 @@ import {
   CardDescription,
   CardContent,
 } from "~/components/ui/card";
-
+import { PurpleButton } from "~/components/ui/PurpleButton";
 import { config } from "~/components/providers/WagmiProvider";
 import { truncateAddress } from "~/lib/truncateAddress";
 import { base, optimism } from "wagmi/chains";
@@ -40,7 +40,7 @@ function ExampleCard() {
           Open Google
         </PurpleButton>
         <Label className="text-center text-sm mt-2">
-          Safe and secure access to the world's information
+          Safe and secure access to the world&apos;s information
         </Label>
       </CardContent>
     </Card>
