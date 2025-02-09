@@ -23,16 +23,25 @@ import { Label } from "~/components/ui/label";
 import { PROJECT_TITLE } from "~/lib/constants";
 
 function ExampleCard() {
+  const openGoogle = useCallback(() => {
+    sdk.actions.openUrl("https://google.com");
+  }, []);
+
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Welcome to the Frame Template</CardTitle>
+        <CardTitle>Webgate Portal</CardTitle>
         <CardDescription>
-          This is an example card that you can customize or remove
+          One-click access to Google Search
         </CardDescription>
       </CardHeader>
-      <CardContent>
-        <Label>Place content in a Card here.</Label>
+      <CardContent className="flex flex-col gap-2">
+        <PurpleButton onClick={openGoogle}>
+          Open Google
+        </PurpleButton>
+        <Label className="text-center text-sm mt-2">
+          Safe and secure access to the world's information
+        </Label>
       </CardContent>
     </Card>
   );
